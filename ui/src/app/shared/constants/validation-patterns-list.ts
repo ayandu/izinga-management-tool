@@ -1,0 +1,23 @@
+import { CYRILLIC_PATTERN_MESSAGE, EMAIL_PATTERN_MESSAGE, PHONE_PATTERN_MESSAGE, REGISTRATIONNUMBER_PATTERN_MESSAGE } from './validation-messages-list';
+
+export const EMAIL_PATTERN = '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$';
+export const CYRILLIC_PATTERN = '^[А-Яа-яЁё\\s]+$';
+export const PHONE_PATTERN = '(^(\+27|0)[6-8][0-9]{8}$)|(^(\+27|0)[0-9]{9}$)';
+export const REGISTRATIONNUMBER_PATTERN = '^(19[5-9]\d|20(0\d|2[0-2]))\\\d{6}\\\d{2}';
+
+export const PATTERNS_LIST: Array<{ PATTERN: string, MESSAGE: string }> = [
+  {
+    PATTERN: EMAIL_PATTERN,
+    MESSAGE: EMAIL_PATTERN_MESSAGE
+  }, {
+    PATTERN: CYRILLIC_PATTERN,
+    MESSAGE: CYRILLIC_PATTERN_MESSAGE
+  }, {
+      PATTERN: PHONE_PATTERN,
+      MESSAGE: PHONE_PATTERN_MESSAGE
+  },
+  {
+    PATTERN: REGISTRATIONNUMBER_PATTERN,
+    MESSAGE: REGISTRATIONNUMBER_PATTERN_MESSAGE
+  }
+];
